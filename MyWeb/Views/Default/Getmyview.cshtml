@@ -1,0 +1,27 @@
+﻿@model List< MyWeb.Models.Empdetails>
+
+<p><u>Employee Details</u></p><br />
+@*@Html.Partial("_Mypartialview",Model)*@
+
+    <table>
+     
+        <tr>
+            <th>Empid</th>
+            <th>EmpName</th>
+            <th>Empsal</th>
+            <th>Empaddress</th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+
+    <tr>
+        <td>@item.Empid</td>
+        <td>@item.EmpName</td>
+        <td>@item.Empsal</td>
+        <td>@item.Empaddress</td>
+    </tr>
+        }
+    </table>
